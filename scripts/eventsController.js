@@ -1,7 +1,7 @@
 var fs = require('fs');
 
 module.exports.get = function(req, res) {
-    var event = fs.readFileSync('app/data/event' + req.params.id + '.json', 'utf8');
+    var event = fs.readFileSync('app/data/event/' + req.params.id + '.json', 'utf8');
     res.setHeader('Content-Type', 'application/json');
     res.send(event);
 };
