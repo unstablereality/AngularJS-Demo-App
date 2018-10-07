@@ -6,6 +6,10 @@ eventsApp.controller('EditProfileController',
 
         $scope.getGravatarUrl = function(email) {
             return gravatarUrlBuilder.buildGravatarUrl(email);
-        }
+        };
+
+        $scope.cancelEvent = function() {
+            window.location = "/events"
+        };
     }
 );

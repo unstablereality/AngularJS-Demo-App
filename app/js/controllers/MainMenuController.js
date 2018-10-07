@@ -15,5 +15,10 @@ eventsApp.controller('MainMenuController',
         $scope.createEvent = function () {
             $location.replace();
             $location.url('/newEvent');
-        }
+        };
+
+        $scope.editProfile = function () {
+            $location.replace();
+            $location.url('/editProfile');
+        };
     });

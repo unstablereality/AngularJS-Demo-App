@@ -7,10 +7,20 @@ var eventsApp = angular.module('eventsApp', ['ngResource', 'ngRoute'])
                 templateUrl: 'templates/NewEvent.html',
                 controller:  'EditEventController'
             });
+        $routeProvider.when('/editProfile',
+            {
+                templateUrl: 'templates/EditProfile.html',
+                controller:  'EditProfileController'
+            });
         $routeProvider.when('/events',
             {
                templateUrl: 'templates/EventList.html',
-               controller:  'EventListController'
+               controller:  'EventListController',
+               resolve: {
+                   event: function($route, eventData) {
+                       return eventData.getAllEvents().$promise;
+                   }
+               }
             });
         $routeProvider.when('/event/:eventId',
             {

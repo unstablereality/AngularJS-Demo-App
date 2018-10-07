@@ -13,6 +13,6 @@ eventsApp.controller('EditEventController',
 
         $scope.cancelEvent = function() {
             window.location = "/EventDetails.html"
-        }
+        };
     }
 );
